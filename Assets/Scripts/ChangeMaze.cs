@@ -18,7 +18,7 @@ public class ChangeMaze : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(player.transform.position,transform.position);   
-        if (Vector3.Distance(player.transform.position,transform.position) < 1.3 && Input.GetKeyDown(KeyCode.E)){
+        if (Vector3.Distance(player.transform.position, transform.position) < 1.3 && Input.GetKeyDown(KeyCode.E)){
             maze_to_deactivate.SetActive(false);
             maze_to_activate.SetActive(true);
         }
