@@ -1129,7 +1129,7 @@ Transform:
   m_GameObject: {fileID: 658907851}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 0.01, z: 20}
+  m_LocalScale: {x: 15, y: 0.01, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2037182775}
@@ -1811,13 +1811,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2399a5a01614a9e4c81c291a9cdf4d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maze_to_deactivate:
+  objectsToDeactivate:
   - {fileID: 2062802880}
-  maze_to_activate:
-  - {fileID: 671301175}
+  objectsToActivate:
   - {fileID: 1174776382}
+  - {fileID: 671301175}
   player: {fileID: 1681900094}
-  distance: 0
+  _reachDistance: 2
+  _fired: 0
 --- !u!4 &914194782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3601921433596247616, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
@@ -2292,29 +2293,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2399a5a01614a9e4c81c291a9cdf4d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maze_to_deactivate:
+  objectsToDeactivate:
   - {fileID: 671301175}
-  maze_to_activate: []
+  objectsToActivate:
+  - {fileID: 235280100}
   player: {fileID: 1681900094}
-  distance: 0
+  _reachDistance: 2
+  _fired: 0
 --- !u!4 &1174776384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3601921433596247616, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
   m_PrefabInstance: {fileID: 1174776381}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1174776385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174776382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15ef12afd3f861f45b3984de57fcf50f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _exit: {fileID: 0}
 --- !u!1001 &1281840806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3836,13 +3826,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2399a5a01614a9e4c81c291a9cdf4d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maze_to_deactivate:
+  objectsToDeactivate:
   - {fileID: 246769059}
-  maze_to_activate:
-  - {fileID: 2062802880}
+  objectsToActivate:
   - {fileID: 914194780}
+  - {fileID: 2062802880}
   player: {fileID: 1681900094}
-  distance: 0
+  _reachDistance: 2
+  _fired: 0
 --- !u!4 &1699497588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3601921433596247616, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
