@@ -13,18 +13,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKey("up"))
-        //     gameObject.transform.Translate(0,0,5f * Time.deltaTime);
-        // if (Input.GetKey("down"))
-        //     gameObject.transform.Translate(0,0,-5f * Time.deltaTime);
-        // if (Input.GetKey("left"))
-        //     gameObject.transform.Rotate(0,-100f * Time.deltaTime,0);
-        // if (Input.GetKey("right"))
-        //     gameObject.transform.Rotate(0,100f * Time.deltaTime,0);
+        Vector3 forward_vector = transform.Find("Camera Offset").transform.Find("Main Camera").transform.forward;
+        forward_vector.y = 0;
+
         if (Input.GetKey("up"))
-            gameObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * (100f * Time.deltaTime);
+            gameObject.GetComponent<Rigidbody>().velocity = forward_vector * (100f * Time.deltaTime);
         else if (Input.GetKey("down"))
-            gameObject.GetComponent<Rigidbody>().velocity = gameObject.transform.forward * (-100f * Time.deltaTime);
+            gameObject.GetComponent<Rigidbody>().velocity = forward_vector * (-100f * Time.deltaTime);
         else
             gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
         
