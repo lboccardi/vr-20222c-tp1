@@ -10,7 +10,7 @@ public class Letrero : MonoBehaviour
     private MeshRenderer meshRenderer;
 
     public bool yawOnly = false;
-    private float minimalViewDistance = 3f;
+    private float minimalViewDistance = 0.6f;
     
     // Start is called before the first frame update
     void Start()
