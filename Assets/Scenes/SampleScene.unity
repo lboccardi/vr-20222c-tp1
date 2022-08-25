@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427135, b: 0.56452316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1740,6 +1740,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2037182775}
     m_Modifications:
+    - target: {fileID: 3572170027354381067, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1681900094}
+    - target: {fileID: 3572170027354381067, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cf6f527886227e4e9625b26c57b61b6, type: 3}
+    - target: {fileID: 3572170027354381067, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
+      propertyPath: objectsToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 1174776382}
+    - target: {fileID: 3572170027354381067, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
+      propertyPath: objectsToActivate.Array.data[1]
+      value: 
+      objectReference: {fileID: 671301175}
+    - target: {fileID: 3572170027354381067, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
+      propertyPath: objectsToDeactivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 2062802880}
     - target: {fileID: 3601921433596247616, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1792,33 +1812,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8536722373947894131, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1681900094}
+    m_RemovedComponents:
+    - {fileID: 8536722373947894131, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
 --- !u!1 &914194780 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7448106260439567222, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
   m_PrefabInstance: {fileID: 914194779}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &914194781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914194780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2399a5a01614a9e4c81c291a9cdf4d6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToDeactivate:
-  - {fileID: 2062802880}
-  objectsToActivate:
-  - {fileID: 1174776382}
-  - {fileID: 671301175}
-  player: {fileID: 1681900094}
-  _reachDistance: 2
-  _fired: 0
 --- !u!4 &914194782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3601921433596247616, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
@@ -1831,6 +1836,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2037182775}
     m_Modifications:
+    - target: {fileID: 1767052486298923389, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1681900094}
+    - target: {fileID: 3126648752002874086, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1681900094}
+    - target: {fileID: 3126648752002874086, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cf6f527886227e4e9625b26c57b61b6, type: 3}
+    - target: {fileID: 3126648752002874086, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
+      propertyPath: objectsToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 914194780}
+    - target: {fileID: 3126648752002874086, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
+      propertyPath: objectsToActivate.Array.data[1]
+      value: 
+      objectReference: {fileID: 2062802880}
+    - target: {fileID: 3126648752002874086, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
+      propertyPath: objectsToDeactivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 246769059}
     - target: {fileID: 3601921433596247616, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1895,7 +1924,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1767052486298923389, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
 --- !u!1001 &975440248
 PrefabInstance:
@@ -2214,6 +2244,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2037182775}
     m_Modifications:
+    - target: {fileID: 413584180606451619, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1681900094}
+    - target: {fileID: 413584180606451619, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cf6f527886227e4e9625b26c57b61b6, type: 3}
+    - target: {fileID: 413584180606451619, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
+      propertyPath: objectsToActivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 235280100}
+    - target: {fileID: 413584180606451619, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
+      propertyPath: objectsToDeactivate.Array.data[0]
+      value: 
+      objectReference: {fileID: 671301175}
+    - target: {fileID: 1794555178168284084, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1681900094}
     - target: {fileID: 3601921433596247616, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2274,32 +2324,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1794555178168284084, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
 --- !u!1 &1174776382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7448106260439567222, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
   m_PrefabInstance: {fileID: 1174776381}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1174776383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174776382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2399a5a01614a9e4c81c291a9cdf4d6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToDeactivate:
-  - {fileID: 671301175}
-  objectsToActivate:
-  - {fileID: 235280100}
-  player: {fileID: 1681900094}
-  _reachDistance: 2
-  _fired: 0
 --- !u!4 &1174776384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3601921433596247616, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
@@ -3814,26 +3846,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7448106260439567222, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
   m_PrefabInstance: {fileID: 926663664}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1699497587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699497585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2399a5a01614a9e4c81c291a9cdf4d6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToDeactivate:
-  - {fileID: 246769059}
-  objectsToActivate:
-  - {fileID: 914194780}
-  - {fileID: 2062802880}
-  player: {fileID: 1681900094}
-  _reachDistance: 2
-  _fired: 0
 --- !u!4 &1699497588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3601921433596247616, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}

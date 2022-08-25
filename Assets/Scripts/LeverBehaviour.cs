@@ -7,7 +7,13 @@ public class LeverBehaviour : MonoBehaviour
     public List<GameObject> objectsToDeactivate;
     public List<GameObject> objectsToActivate;
     public GameObject player;
-    [SerializeField] private float _reachDistance = 2.0f;
+
+    public AudioClip AudioClip => _audioClip;
+    [SerializeField] private AudioClip _audioClip;
+
+    public AudioSource AudioSource => _audioSource;
+    private AudioSource _audioSource;
+
     [SerializeField] private bool _fired = false;
     
     private void SwitchHandle() {
@@ -17,28 +23,25 @@ public class LeverBehaviour : MonoBehaviour
             currentRotation.x = -currentRotation.x;
             leverTrans.transform.localRotation = Quaternion.Euler(currentRotation);
         }
-        // TODO Play Sound
+        AudioSource.PlayOneShot(AudioClip);
     }
 
     private void DeactivateLever() {
         this.gameObject.SetActive(false);
     }
 
-    private bool IsObjectWithinPlayerReach() {
-        return Vector3.Distance(player.transform.position, transform.position) < _reachDistance;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.clip = AudioClip;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!_fired) {   
-            if (Input.GetKeyDown(KeyCode.E) && IsObjectWithinPlayerReach()){
+            if (Input.GetKeyDown(KeyCode.E) && DistanceService.IsObjectWithinPlayerReach(player.transform.position, transform.position)){
                 _fired = true;
                 SwitchHandle();
                 foreach (GameObject maze in objectsToDeactivate) maze.SetActive(false);
