@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ChangeMaze : MonoBehaviour
 {
-    public GameObject maze_to_deactivate;
-    public GameObject maze_to_activate;
+    public List<GameObject> maze_to_deactivate;
+    public List<GameObject> maze_to_activate;
     public GameObject player;
     public float distance; 
     // Start is called before the first frame update
@@ -18,9 +18,13 @@ public class ChangeMaze : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(player.transform.position,transform.position);   
-        if (Vector3.Distance(player.transform.position, transform.position) < 1.3 && Input.GetKeyDown(KeyCode.E)){
-            maze_to_deactivate.SetActive(false);
-            maze_to_activate.SetActive(true);
+        if (Vector3.Distance(player.transform.position, transform.position) < 2 && Input.GetKeyDown(KeyCode.E)){
+            foreach (GameObject maze in maze_to_deactivate){
+                maze.SetActive(false);
+            }
+            foreach (GameObject maze in maze_to_activate){
+                maze.SetActive(true);
+            }
         }
         
     }
