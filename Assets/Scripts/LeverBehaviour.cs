@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeMaze : MonoBehaviour
+public class LeverBehaviour : MonoBehaviour
 {
-    public List<GameObject> maze_to_deactivate;
-    public List<GameObject> maze_to_activate;
+    public List<GameObject> objectsToDeactivate;
+    public List<GameObject> objectsToActivate;
     public GameObject player;
-    public float distance;
-    private bool fired = false;
-    // Start is called before the first frame update
+    [SerializeField] private float _reachDistance = 2.0f;
+    [SerializeField] private bool _fired = false;
     
     private void SwitchHandle() {
         Transform leverTrans = this.gameObject.transform.Find("Lever Handle");
@@ -18,12 +17,18 @@ public class ChangeMaze : MonoBehaviour
             currentRotation.x = -currentRotation.x;
             leverTrans.transform.localRotation = Quaternion.Euler(currentRotation);
         }
+        // TODO Play Sound
     }
 
     private void DeactivateLever() {
         this.gameObject.SetActive(false);
     }
-    
+
+    private bool IsObjectWithinPlayerReach() {
+        return Vector3.Distance(player.transform.position, transform.position) < _reachDistance;
+    }
+
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -32,17 +37,12 @@ public class ChangeMaze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!fired) {
-            distance = Vector3.Distance(player.transform.position,transform.position);   
-            if (Vector3.Distance(player.transform.position, transform.position) < 2 && Input.GetKeyDown(KeyCode.E)){
+        if (!_fired) {   
+            if (Input.GetKeyDown(KeyCode.E) && IsObjectWithinPlayerReach()){
+                _fired = true;
                 SwitchHandle();
-                foreach (GameObject maze in maze_to_deactivate){
-                    maze.SetActive(false);
-                }
-                foreach (GameObject maze in maze_to_activate){
-                    maze.SetActive(true);
-                }
-                fired = true;
+                foreach (GameObject maze in objectsToDeactivate) maze.SetActive(false);
+                foreach (GameObject maze in objectsToActivate) maze.SetActive(true);
                 Invoke("DeactivateLever", 2);
             }
         }
