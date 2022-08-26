@@ -17,16 +17,16 @@ public class Movement : MonoBehaviour
         forward_vector.y = 0;
 
         if (Input.GetKey("up"))
-            gameObject.GetComponent<Rigidbody>().velocity = forward_vector * (100f * Time.deltaTime);
+            gameObject.GetComponent<Rigidbody>().velocity = forward_vector * (2f);
         else if (Input.GetKey("down"))
-            gameObject.GetComponent<Rigidbody>().velocity = forward_vector * (-100f * Time.deltaTime);
+            gameObject.GetComponent<Rigidbody>().velocity = forward_vector * (-2f);
         else
             gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
         
         if (Input.GetKey("left"))
-            gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,-100f * Time.deltaTime,0);
+            gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,-1.2f,0);
         else if (Input.GetKey("right"))
-            gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,100f * Time.deltaTime,0);
+            gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,1.2f,0);
         else
             gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
     }
