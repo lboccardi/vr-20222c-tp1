@@ -9,6 +9,7 @@ public class BlackHoleBehaviour : MonoBehaviour
     
     public GameObject player;
     public GameObject ladder;
+    public GameObject final_cube;
     [SerializeField] private float _reachDistance = 2.0f;
 
     // Start is called before the first frame update
@@ -37,9 +38,17 @@ public class BlackHoleBehaviour : MonoBehaviour
     {
         transform.position = _startPosition + new Vector3(0.0f, 0.4f * Mathf.Sin(speed * Time.time), 0.0f);
 
-        if ( (IsObjectWithinPlayerReach()) && (player.transform.position.y < 5.5) )
+        if (IsObjectWithinPlayerReach()) 
         {
             player.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
+        }
+
+        if (player.transform.position.y > 4.5)
+        {
+            ladder.SetActive(false);
+            this.gameObject.SetActive(false);
+            final_cube.SetActive(true);
+            player.transform.position = new Vector3(0.0f, 0.1f, 0.0f);
         }
     }
 }
