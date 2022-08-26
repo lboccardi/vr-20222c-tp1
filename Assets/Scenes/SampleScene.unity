@@ -915,6 +915,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startPosition: {x: 0, y: 0, z: 0}
   speed: 2
+  player: {fileID: 1681900094}
+  ladder: {fileID: 411632764}
+  _reachDistance: 2
+--- !u!1 &411632764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 687969724649854954, guid: 005c49c71adaace40989ca900cff1905, type: 3}
+  m_PrefabInstance: {fileID: 1855301900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &511173534
 PrefabInstance:
   m_ObjectHideFlags: 0
