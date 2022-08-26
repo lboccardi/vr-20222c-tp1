@@ -48,6 +48,7 @@ public class BlackHoleBehaviour : MonoBehaviour
             ladder.SetActive(false);
             this.gameObject.SetActive(false);
             final_cube.SetActive(true);
+            
             player.transform.position = new Vector3(0.0f, 0.1f, 0.0f);
         }
     }
