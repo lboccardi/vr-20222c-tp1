@@ -1747,7 +1747,7 @@ PrefabInstance:
     - target: {fileID: 3572170027354381067, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7cf6f527886227e4e9625b26c57b61b6, type: 3}
+      objectReference: {fileID: 8300000, guid: 5965363abef0d7b48b1ce0d065ecaf36, type: 3}
     - target: {fileID: 3572170027354381067, guid: c08f3a8b07e7cbc4eb53d6fa02fe24a7, type: 3}
       propertyPath: objectsToActivate.Array.data[0]
       value: 
@@ -1847,7 +1847,7 @@ PrefabInstance:
     - target: {fileID: 3126648752002874086, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7cf6f527886227e4e9625b26c57b61b6, type: 3}
+      objectReference: {fileID: 8300000, guid: 5965363abef0d7b48b1ce0d065ecaf36, type: 3}
     - target: {fileID: 3126648752002874086, guid: 85f0ddfa479656745a7bf93d76cd02ab, type: 3}
       propertyPath: objectsToActivate.Array.data[0]
       value: 
@@ -2251,7 +2251,7 @@ PrefabInstance:
     - target: {fileID: 413584180606451619, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7cf6f527886227e4e9625b26c57b61b6, type: 3}
+      objectReference: {fileID: 8300000, guid: 5965363abef0d7b48b1ce0d065ecaf36, type: 3}
     - target: {fileID: 413584180606451619, guid: de3c741050988fd42b78dc7caac8abc5, type: 3}
       propertyPath: objectsToActivate.Array.data[0]
       value: 
